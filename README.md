@@ -17,5 +17,4 @@ payments got release to Seller after Both side mark Satisfied
 https://user-images.githubusercontent.com/95046456/208304283-53bba244-e89f-490b-addd-2804fb706181.mp4
 
 
-![dCapture2](https://user-images.githubusercontent.com/95046456/208309247-7d8e775e-5953-4d89-8c21-caec31794240.png)
-![vvvvvvv](https://user-images.githubusercontent.com/95046456/208310197-fa403179-96f5-460f-8690-17e3edd23606.PNG)
+![dCapture2](https://user-images.githubusercontent.com/95046456/208309247-7d8e775e-5953-4d89-8c21-caec31794240.png)![vvvvvvv](https://user-images.githubusercontent.com/95046456/208310238-a21341c2-e3a3-4e1b-bc71-0fb5ade2f986.PNG)
