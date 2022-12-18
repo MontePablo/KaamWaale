@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_backround_reverse"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/textView11"
+        android:text="select package"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <Spinner
+        android:layout_margin="5dp"
+        android:id="@+id/order_spin"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent=".8"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView11"/>
+
+
+    <TextView
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_spin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/order_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="499"/>
+    <TextView
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toBottomOf="@id/order_spin"
+        app:layout_constraintLeft_toRightOf="@id/order_price"
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" / "/>
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/order_unit"
+        app:layout_constraintLeft_toRightOf="@id/textView9"
+        app:layout_constraintTop_toBottomOf="@id/order_spin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day" />
+    <TextView
+        android:clickable="false"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/order_price"
+        android:text="select quantity"
+        android:id="@+id/textView10"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="price"
+        app:layout_constraintRight_toLeftOf="@id/order_price"
+        app:layout_constraintTop_toBottomOf="@id/order_spin"/>
+    <Spinner
+        android:layout_margin="5dp"
+        android:id="@+id/order_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/textView10"
+        app:layout_constraintTop_toBottomOf="@id/order_price"/>
+    <Button
+        android:textSize="10sp"
+        android:id="@+id/order_goto_payment"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textColor="@color/white"
+        android:text="Goto payment"
+        app:layout_constraintRight_toLeftOf="@id/order_cancel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/gradient_signin"
+        app:layout_constraintTop_toBottomOf="@id/order_quantity"/>
+    <Button
+        android:textSize="10sp"
+        android:id="@+id/order_cancel"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="cancel"
+        app:layout_constraintLeft_toRightOf="@id/order_goto_payment"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/gradient_signup"
+        app:layout_constraintTop_toBottomOf="@id/order_quantity"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

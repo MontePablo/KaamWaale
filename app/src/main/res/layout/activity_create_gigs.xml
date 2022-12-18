@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_backround"
+    tools:context=".CreateGigs">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create a Gig"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/title"
+                android:autoSizeTextType="uniform"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gig title"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@id/title"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+            <EditText
+                android:layout_marginTop="20dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/shape_half_round_corner_white"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintBottom_toTopOf="@id/linear_layout_category"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Category"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/linear_layout_category"/>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintBottom_toTopOf="@id/linear_layout_packages"
+                android:id="@+id/linear_layout_category">
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linear_layout_packages"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/add_package"
+            app:layout_constraintTop_toBottomOf="@id/linear_layout_category">
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/add_package"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:paddingRight="4dp"
+                android:textSize="9sp"
+                android:drawableLeft="@drawable/logo_add"
+                android:text="another package"
+                android:textAllCaps="false"
+                android:background="@drawable/shape_half_round_corner_offwhite_deep_border"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/service_type_radio_group"
+                app:layout_constraintTop_toBottomOf="@id/linear_layout_packages" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="serviceable address"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/address"/>
+           <TextView
+               android:textSize="12sp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:layout_constraintBottom_toTopOf="@id/service_type_radio_group"
+               app:layout_constraintLeft_toLeftOf="parent"
+               android:text="Service / Project Delivery Type"/>
+            <RadioGroup
+                android:layout_marginTop="25dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/shape_half_round_corner_darkwhite_border"
+                android:id="@+id/service_type_radio_group"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/add_package">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Online"
+                    android:id="@+id/online"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Offline"
+                    android:id="@+id/offline"/>
+            </RadioGroup>
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:id="@+id/addressLayout"-->
+<!--                android:layout_width="0dp"-->
+<!--                app:layout_constraintWidth_percent=".8"-->
+<!--                android:layout_height="0dp"-->
+<!--                app:layout_constraintHeight_percent=".15"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintRight_toLeftOf="@id/current_location"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/scrollview_images"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/add_package">-->
+                <AutoCompleteTextView
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/current_location"
+                    app:layout_constraintBottom_toTopOf="@id/scrollview_images"
+                    app:layout_constraintTop_toBottomOf="@id/service_type_radio_group"
+                    android:id="@+id/address"
+                    android:textSize="12sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintWidth_percent="0.8"
+                    android:hint="your serviceable city or town"
+                    android:layout_weight="1"/>
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <ImageButton
+                android:layout_marginTop="20dp"
+                android:id="@+id/current_location"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/shape_round_corner_offwhite_deep"
+                android:src="@drawable/current_location"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/address"
+                app:layout_constraintTop_toBottomOf="@id/service_type_radio_group"
+                app:layout_constraintWidth_percent="0.10" />
+            <HorizontalScrollView
+                android:layout_marginTop="20dp"
+                android:id="@+id/scrollview_images"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/description"
+                app:layout_constraintTop_toBottomOf="@id/address">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/linear_layout_Images"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+                </LinearLayout>
+            </HorizontalScrollView>
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/retryToast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/scrollview_images"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="10sp"
+                android:textColor="#BC0202"
+                android:text="uplaod failed, kindly press the retry button of the image!"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/description"
+                android:text="Description"/>
+            <EditText
+                android:hint="write something about your job in detail"
+                android:minHeight="50dp"
+                android:textSize="12sp"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scrollview_images"
+                app:layout_constraintBottom_toTopOf="@id/publish"
+                android:background="@drawable/shape_half_round_corner_darkwhite_border"
+                android:id="@+id/description"/>
+
+
+
+<!--            <Button-->
+<!--                android:id="@+id/add_image"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="25dp"-->
+<!--                android:paddingRight="4dp"-->
+<!--                android:textSize="9sp"-->
+<!--                android:drawableLeft="@drawable/logo_add"-->
+<!--                android:text="another image"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:background="@drawable/shape_half_round_corner_offwhite_deep_border"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/scrollview_images" />-->
+            <Button
+                android:id="@+id/publish"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description"
+                android:text="Publish"
+                android:textAllCaps="false"
+                android:background="@drawable/shape_half_round_corner_offwhite_deep_border"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

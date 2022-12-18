@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kaamwaale">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KaamWaale">
+        <activity
+            android:name=".AllChats"
+            android:exported="false" />
+        <activity
+            android:name=".MyGigs"
+            android:exported="false" />
+        <activity
+            android:name=".OrderDetail"
+            android:exported="false" />
+        <activity
+            android:name=".Orders"
+            android:exported="false" />
+        <activity
+            android:name=".Demo"
+            android:exported="true" />
+        <activity
+            android:name=".Chat"
+            android:exported="true" />
+        <activity
+            android:name=".GigsDetail"
+            android:exported="false" /> <!-- <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" -->
+        <!-- android:theme="@style/Base.Theme.AppCompat"/> -->
+        <activity
+            android:name=".CreateGigs"
+            android:exported="true" />
+        <activity
+            android:name=".ProfileGeneral"
+            android:exported="true" />
+        <activity
+            android:name=".ProfileBusiness"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreenTwo"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BecomeSeller"
+            android:exported="true"
+            android:label="@string/title_activity_become_seller"
+            android:theme="@style/Theme.KaamWaale.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="@string/title_activity_splash_screen"
+            android:theme="@style/Theme.KaamWaale.Fullscreen" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+</manifest>

@@ -1,0 +1,27 @@
+<resources>
+
+    <style name="Widget.Theme.KaamWaale.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.KaamWaale.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="toolbartex" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Foxandroid.toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/white</item>
+<!--        <item name="theme">@style/AppTheme</item>-->
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/toolbartex</item>
+    </style>
+
+    <style name="button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textColor">@color/buttonText</item>
+        <item name="android:backgroundTint">@color/buttonColour</item>
+    </style>
+</resources>

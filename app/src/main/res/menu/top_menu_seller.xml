@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/nav_profile"
+        android:icon="@drawable/logo_profile"
+        app:showAsAction="always"
+        android:title="Profile">
+        <menu>
+            <item android:id="@+id/nav_personal_information"
+                app:showAsAction="collapseActionView"
+                android:title="personal information"/>
+            <item android:id="@+id/nav_business_information"
+                app:showAsAction="collapseActionView"
+                android:title="professional information"/>
+            <item android:id="@+id/nav_change_password"
+                app:showAsAction="collapseActionView"
+                android:title="change password"/>
+            <item android:id="@+id/nav_log_out"
+                android:icon="@drawable/logo_sign_out"
+                app:showAsAction="collapseActionView"
+                android:title="log out"/>
+        </menu>
+    </item>
+    <item android:id="@+id/nav_chat"
+        android:icon="@drawable/logo_chat"
+        app:showAsAction="always"
+        android:title="chat"/>
+    <item android:id="@+id/nav_settings"
+        android:icon="@drawable/logo_settings"
+        app:showAsAction="collapseActionView"
+        android:title="settings"/>
+    <item android:id="@+id/nav_orders"
+        android:icon="@drawable/logo_orders"
+        app:showAsAction="collapseActionView"
+        android:title="my orders"/>
+</menu>

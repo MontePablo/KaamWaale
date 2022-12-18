@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileGeneral">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="776dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="776dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <TextView
+        android:layout_margin="30dp"
+        android:textSize="20sp"
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:textStyle="bold"
+        android:text="Basic Profile"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintHeight_percent=".92"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/heading">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pic_group"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent=".15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/avatar"
+                app:civ_border_color="#3f51b5"
+                app:civ_border_width="4dp"
+                app:layout_constraintHeight_percent="1"
+                app:layout_constraintWidth_percent=".35"
+                app:civ_shadow_color="#3f51b5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/change_image_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/shape_round_corner"
+                android:backgroundTint="@color/blue"
+                android:src="@drawable/logo_camera"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.30"
+                app:layout_constraintHorizontal_bias="0.612"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.906"
+                app:layout_constraintWidth_percent="0.1"
+                app:tint="@color/white" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/name_group"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/mobile_group"
+            app:layout_constraintHeight_percent="0.10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pic_group">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:paddingBottom="4dp"
+                android:text="Full Name"
+                app:layout_constraintHeight_percent="0.30"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/shape_half_round_corner_darkwhite_border"
+                app:layout_constraintHeight_percent="0.70"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView2"
+                app:layout_constraintWidth_percent="1.0"
+                tools:layout_editor_absoluteY="156dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mobile_group"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/email_group"
+            app:layout_constraintHeight_percent="0.10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_group">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:paddingBottom="4dp"
+                android:text="Mobile number"
+                app:layout_constraintHeight_percent="0.30"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/mobile"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/shape_half_round_corner_darkwhite_border"
+                app:layout_constraintHeight_percent="0.70"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView3"
+                app:layout_constraintWidth_percent="1.0"
+                tools:layout_editor_absoluteY="156dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/email_group"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/birthdate_group"
+            app:layout_constraintHeight_percent="0.13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mobile_group">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:paddingBottom="4dp"
+                android:text="Email"
+                app:layout_constraintHeight_percent="0.30"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/verify_status"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="44dp"
+                android:autoSizeTextType="uniform"
+                android:paddingBottom="4dp"
+                android:text="Verified"
+                android:textColor="#10C305"
+                android:visibility="invisible"
+                app:layout_constraintHeight_percent="0.30"
+                app:layout_constraintLeft_toRightOf="@id/textView6"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/verify_button"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:paddingBottom="4dp"
+                android:text="Verify Now"
+                android:textAllCaps="false"
+                android:paddingHorizontal="10dp"
+                android:visibility="invisible"
+                android:background="@drawable/gradient_signup"
+                app:layout_constraintHeight_percent="0.30"
+                app:layout_constraintLeft_toRightOf="@id/verify_status"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/shape_half_round_corner_darkwhite_border"
+                app:layout_constraintHeight_percent="0.58"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView6"
+                app:layout_constraintWidth_percent="1.0"
+                tools:layout_editor_absoluteY="156dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/birthdate_group"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/gender_group"
+            app:layout_constraintHeight_percent="0.10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_group">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:paddingBottom="4dp"
+                android:text="Date of Birth"
+                app:layout_constraintHeight_percent="0.30"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/dob"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/shape_half_round_corner_darkwhite_border"
+                android:hint="DD-MM-YYYY"
+                android:inputType="date"
+                app:layout_constraintHeight_percent="0.70"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView4"
+                app:layout_constraintWidth_percent="1.0"
+                tools:layout_editor_absoluteY="156dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gender_group"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttom_group"
+            app:layout_constraintHeight_percent="0.10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birthdate_group">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:paddingBottom="4dp"
+                android:text="Gender"
+                app:layout_constraintHeight_percent="0.30"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/radio_group_gender"
+                android:gravity="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView5"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/shape_half_round_corner_darkwhite_border"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:layout_marginLeft="3dp"
+                    android:id="@+id/female"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/shape_half_round_corner_darkwhite_border"
+                    android:text="Female" />
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttom_group"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_group">
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/gradient_signin"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/skip"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.49" />
+
+            <Button
+                android:id="@+id/skip"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/gradient_signup"
+                android:text="Skip"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="1"
+                app:layout_constraintLeft_toRightOf="@id/save"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.49" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

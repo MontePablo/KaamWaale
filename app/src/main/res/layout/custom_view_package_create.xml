@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_round_corner_offwhite">
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintLeft_toRightOf="@id/guideline6" />
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:minHeight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:hint="example: Basic pack, standard pack or Premium pack"
+        android:autoSizeTextType="uniform"
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_half_round_corner_white"
+        app:layout_constraintBottom_toTopOf="@id/description"
+        app:layout_constraintLeft_toRightOf="@id/guideline6"
+        app:layout_constraintRight_toLeftOf="@id/guideline5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="70dp"
+        android:textSize="10sp"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        app:layout_constraintLeft_toRightOf="@id/guideline6"
+        app:layout_constraintBottom_toTopOf="@id/description"/>
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:hint="example: delivery time, no. of revisions, you provide source file or not, no. of skips allowed etc"
+        android:autoSizeTextType="uniform"
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:textSize="10sp"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:background="@drawable/shape_half_round_corner_white"
+        app:layout_constraintBottom_toTopOf="@id/radio_group_price_type"
+        app:layout_constraintLeft_toRightOf="@id/guideline6"
+        app:layout_constraintRight_toLeftOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline6"
+        app:layout_constraintBottom_toTopOf="@id/price"/>
+    <EditText
+        android:paddingLeft="10dp"
+        android:hint="ex: 30"
+        android:autoSizeTextType="uniform"
+        android:id="@+id/price"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:minHeight="20dp"
+        android:background="@drawable/shape_half_round_corner_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline6"
+
+        app:layout_constraintTop_toBottomOf="@id/description" />
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:text="Rupees"
+        app:layout_constraintLeft_toRightOf="@id/price"
+        app:layout_constraintTop_toBottomOf="@id/textView"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="2dp"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:text="per"
+        app:layout_constraintLeft_toRightOf="@id/textView2"
+        app:layout_constraintTop_toBottomOf="@id/textView"/>
+    <RadioGroup
+        android:layout_marginLeft="5dp"
+        android:id="@+id/radio_group_price_type"
+        android:paddingRight="5dp"
+        android:background="@drawable/shape_half_round_corner_darkwhite_border"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        app:layout_constraintLeft_toRightOf="@id/textView3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description">
+        <RadioButton
+            android:id="@+id/per_project"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7sp"
+            android:text="Project"
+            android:checked="false"/>
+        <RadioButton
+            android:id="@+id/per_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7sp"
+            android:text="Day"
+            android:checked="false"/>
+        <RadioButton
+            android:id="@+id/per_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7sp"
+            android:text="Hour"
+            android:checked="false"/>
+        <RadioButton
+            android:id="@+id/per_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7sp"
+            android:text="Month"
+            android:checked="false"/>
+    </RadioGroup>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <ImageButton
+        android:id="@+id/remove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo_cancel"
+        android:backgroundTint="@color/offwhite_deep"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@id/guideline5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

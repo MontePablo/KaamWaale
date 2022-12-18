@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/shape_half_round_corner_white"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_gig_root_view"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="6dp"
+            android:id="@+id/gigSection"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@id/item_gig_rating"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/item_gigs_image"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/item_gigs_headline"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="I will create simple minimalistic logo designs and quick deliver it"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_gigs_image" />
+            <TextView
+                android:layout_marginLeft="2dp"
+                android:id="@+id/item_gig_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Baruipur, Kolkata"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_gigs_headline"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        <RatingBar-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="14dp"-->
+<!--            android:numStars="5"-->
+<!--            app:layout_constraintRight_toRightOf="@id/gigSection"-->
+<!--            app:layout_constraintLeft_toLeftOf="@id/gigSection"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/gigSection"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/userSection"-->
+<!--            android:id="@+id/item_gig_rating"/>-->
+        <com.borjabravo.simpleratingbar.SimpleRatingBar
+            android:id="@+id/item_gig_rating"
+            app:layout_constraintRight_toRightOf="@id/gigSection"
+            app:layout_constraintLeft_toLeftOf="@id/gigSection"
+            app:layout_constraintTop_toBottomOf="@id/gigSection"
+            app:layout_constraintBottom_toTopOf="@id/userSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:isIndicator="false"
+            app:ratingCount="5"
+            app:ratingMargin="5dp"
+            app:ratingSize="12dp"/>
+        <TextView
+            android:id="@+id/item_gig_rating_count"
+            android:layout_margin="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(55)"
+            android:textSize="8sp"
+            app:layout_constraintLeft_toRightOf="@id/item_gig_rating"
+            app:layout_constraintTop_toBottomOf="@id/gigSection"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="5dp"
+            android:id="@+id/userSection"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_solid_black_edge"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_gig_rating">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_margin="4dp"
+                android:id="@+id/item_gigs_user_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/avatar"
+                app:civ_border_color="#3f51b5"
+                app:civ_border_width="4dp"
+                app:layout_constraintHeight_percent="1"
+                app:layout_constraintWidth_percent=".35"
+                app:civ_shadow_color="#3f51b5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/item_gigs_user_name"/>
+            <TextView
+                android:id="@+id/item_gigs_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:text="Maharaj Dey"
+                app:layout_constraintLeft_toRightOf="@id/item_gigs_user_image"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="4dp"/>
+            <TextView
+                android:id="@+id/item_gigs_user_profession"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Softwere Developer"
+                app:layout_constraintLeft_toRightOf="@id/item_gigs_user_image"
+                app:layout_constraintTop_toBottomOf="@id/item_gigs_user_name"
+                android:layout_margin="4dp"/>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="9dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintRight_toLeftOf="@id/item_gigs_user_rating"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/logo_star"/>
+            <TextView
+                android:id="@+id/item_gigs_user_totalRatings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="4dp"
+                android:text="(120)"
+                android:textSize="7sp"/>
+            <TextView
+                android:id="@+id/item_gigs_user_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintRight_toLeftOf="@id/item_gigs_user_totalRatings"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                android:text="3.5"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/optionSection"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userSection">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Starts At"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="2dp"
+                app:layout_constraintLeft_toRightOf="@id/item_gigs_save"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="6sp"/>
+            <TextView
+                android:id="@+id/item_gigs_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/textView"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="500"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="4dp"/>
+            <TextView
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="1dp"
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/item_gigs_price"             app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                android:textSize="7sp"
+                android:text="Rs/" />
+            <TextView
+                android:layout_marginTop="6dp"
+                android:id="@+id/item_gigs_price_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/textView5"             app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                android:textSize="7sp"
+                android:text="hour" />
+            <ImageButton
+                android:id="@+id/item_gigs_save"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/logo_save"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="2dp"/>
+<!--            <ImageButton-->
+<!--                android:visibility="invisible"-->
+<!--                android:id="@+id/item_gigs_saved"-->
+<!--                android:layout_width="15dp"-->
+<!--                android:layout_height="15dp"-->
+<!--                android:src="@drawable/logo_saved"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:layout_marginTop="2dp"/>-->
+
+            <Button
+                android:id="@+id/item_gigs_hire"
+                android:layout_width="56dp"
+                android:layout_height="26dp"
+                android:text="Hire Now"
+                android:textSize="5sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/item_gigs_price_unit"
+                app:layout_constraintTop_toTopOf="parent"
+                android:backgroundTint="@drawable/item_selector"
+                android:foregroundTint="@drawable/item_foreground_selector"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

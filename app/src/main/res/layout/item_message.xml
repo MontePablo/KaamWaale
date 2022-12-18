@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:padding="8dp"
+        android:id="@+id/chat_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="yes sir nice to meet you!"
+        android:background="@drawable/backround_chat_receive"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/timeReceive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25-11-2018 00:43:39"
+        android:textSize="8sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chat_receive"/>
+
+    <TextView
+        android:layout_marginRight="5dp"
+        android:id="@+id/timeSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25-11-2018 00:43:39"
+        android:textSize="8sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chat_send"/>
+    <TextView
+        android:padding="8dp"
+        android:id="@+id/chat_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hallo, is it available"
+        android:background="@drawable/backround_chat_send"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
