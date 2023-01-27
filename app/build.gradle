@@ -37,14 +37,7 @@ android {
     buildFeatures {
         viewBinding true
     }
-    buildscript {
-        repositories {
-            mavenCentral()
-            flatDir {
-                dirs 'libs'
-            }
-        }
-    }
+
 }
 
 dependencies {
